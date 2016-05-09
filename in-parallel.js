@@ -1,7 +1,7 @@
 function runInParallel(collection, parallelAction, onFinish, handleError){
 	if(collection && isFunction(parallelAction) && isFunction(onFinish)) {
 		if(collection.length > 0) {
-			consoleLog("runInParallel", "Running actions in parallel.");
+			console.log("Running actions in parallel.");
 			collection.parallelErrorsMap99 = {};
 			var numElements = collection.length;
 			var numElementsCompleted = 0;
@@ -31,7 +31,7 @@ function runInParallel(collection, parallelAction, onFinish, handleError){
 				}
 			}
 		} else {
-			consoleLog("runInParallel", "Provided collection is empty.", true);
+			console.log("Provided collection is empty.", true);
 			if(isFunction(handleError)) {
 				//an error handler was provided. handle the error as desired.
 				handleError({message:"Provided collection is empty."});
@@ -41,7 +41,7 @@ function runInParallel(collection, parallelAction, onFinish, handleError){
 			}
 		}
 	} else {
-		consoleLog("runInParallel", "Missing necessary arguments. No collection provided.", true);
+		console.log("Missing necessary arguments. No collection provided.", true);
 		if(isFunction(handleError)) handleError({message:"Missing necessary arguments: " + collection + " " + parallelAction + " " + onFinish});
 	}
 }
