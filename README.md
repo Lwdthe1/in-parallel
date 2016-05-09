@@ -9,7 +9,7 @@ A node module for running async tasks on an array and finishing together to run 
 Initialize inParallel like so:
   ```javascript
 	//the proceedAfterParallelAction() method is provided
-	var inParallel = require('scapegoat');
+	var inParallel = require('in-parallel');
   ```
 ###A Simple Example
   ```javascript
