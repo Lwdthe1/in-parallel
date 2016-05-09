@@ -40,7 +40,7 @@ module.exports = {
 				}
 			} else {
 				if(showDebugMessages) {
-					console.log("Provided collection is empty.", true);
+					console.log("Provided collection is empty.");
 				}
 				if(isFunction(handleError)) {
 					//an error handler was provided. handle the error as desired.
@@ -51,7 +51,7 @@ module.exports = {
 				}
 			}
 		} else {
-			if(showDebugMessages) console.log("Missing necessary arguments. No collection provided.", true);
+			if(showDebugMessages) console.log("Missing necessary arguments. No collection provided.");
 			if(isFunction(handleError)) handleError({message:"Missing necessary arguments: " + collection + " " + parallelAction + " " + onFinish});
 		}
 	}

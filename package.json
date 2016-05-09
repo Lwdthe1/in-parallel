@@ -1,6 +1,6 @@
 {
   "name": "in-parallel",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "A small library for Runs a function on the elements of the provided collection in parallel ",
   "main": "index.js",
   "scripts": {
@@ -18,9 +18,5 @@
   "bugs": {
     "url": "https://github.com/Lwdthe1/in-parallel/issues"
   },
-  "homepage": "https://github.com/Lwdthe1/in-parallel#readme",
-  "devDependencies": {
-    "chai": "^3.5.0",
-    "mocha": "^2.4.5"
-  }
+  "homepage": "https://github.com/Lwdthe1/in-parallel#readme"
 }
