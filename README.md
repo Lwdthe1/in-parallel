@@ -6,7 +6,7 @@ A node module for running async tasks on an array and finishing together to run 
   npm install in-parallel --save
 
 ## Usage
-  ```
+  ```javascript
   //the proceedAfterParallelAction() method is provided
   var inParallel = require('scapegoat');
 
@@ -25,15 +25,14 @@ A node module for running async tasks on an array and finishing together to run 
 			if(err || !doc) {
 		    	//handle the error
 		    	if(err) console.log("Failed to find one doc: " + err.message);
-		    	
-		    	//call the provided proceed method after this user is done 
-			    collectionOfUsers.proceedAfterParallelAction();
+		    		//call the provided proceed method after this user is done 
+			   	this.proceedAfterInParallelAction();
 			} else {
 				//find succeeded
 				//do something with the result
 				
 				//call the provided proceed method after this user is done 
-			  collectionOfUsers.proceedAfterParallelAction();
+			  	this.proceedAfterInParallelAction();
 			}
 		});
 	}, function(){
