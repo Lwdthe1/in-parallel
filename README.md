@@ -10,14 +10,16 @@ A node module for running async tasks on an array and finishing together to run 
   //the proceedAfterParallelAction() method is provided
   var inParallel = require('scapegoat');
 
+  //A very simple use case
   var collection = [1,2,3];
   inParallel.run(collection, function(element){
   	element++;
-  	collection.proceedAfterParallelAction();
+  	this.proceedAfterParallelAction();
   }, function(){
-  	collection.push(5);
+  	this.push(5);
   });
   
+  //a less simple use case with a MongoDB query
   var collectionOfUsers = [user1,user2,user3];
   inParallel.run(collectionOfUsers, function(user){
 		//find the user's photos
