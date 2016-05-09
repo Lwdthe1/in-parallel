@@ -34,7 +34,9 @@ module.exports = {
 					}
 				}
 			} else {
-				if(showDebugMessages) console.log("Provided collection is empty.", true);
+				if(showDebugMessages) {
+					console.log("Provided collection is empty.", true);
+				}
 				if(isFunction(handleError)) {
 					//an error handler was provided. handle the error as desired.
 					handleError({message:"Provided collection is empty."});
