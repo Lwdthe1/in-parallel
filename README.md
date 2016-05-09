@@ -11,7 +11,7 @@ Initialize inParallel like so:
 	//the proceedAfterParallelAction() method is provided
 	var inParallel = require('scapegoat');
   ```
-###A Simple Example With Database Queries
+###A Simple Example
   ```javascript
 	var collection = [1,2,3];
 	inParallel.run(collection, function(element){
@@ -21,7 +21,7 @@ Initialize inParallel like so:
 		collection.push(5);
 	});
   ```
-###A Less Simple Example
+###A Less Simple Example With Database Queries
 Imagine you have a bunch of users and each user has a bunch of photos all stored in a mongodb. If you have to get each user's photo and do something with them, it'd probably be best to run such tasks in parallel:
   ```javascript
   	//a less simple use case with a MongoDB query
