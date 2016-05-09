@@ -21,11 +21,12 @@ module.exports = {
 
 				/*set the proceed function 
 				for each parallel action to call when it finishes with an element*/
-				var proceedAfterInParallelAction = function() {
+				collection.proceedAfterInParallelAction = function() {
 					numElementsCompleted++;
 					
 					//check if all parallel actions are complete
 					if(numElementsCompleted == numElements) {
+						delete collection.proceedAfterInParallelAction;
 						//run the onFinish function
 						onFinish();
 					}

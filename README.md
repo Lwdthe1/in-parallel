@@ -16,7 +16,7 @@ Initialize inParallel like so:
 	var collection = [1,2,3];
 	inParallel.run(collection, function(element){
 		element++;
-		this.proceedAfterParallelAction();
+		collection.proceedAfterInParallelAction();
 	}, function(){
 		collection.push(5);
 	});
@@ -33,13 +33,13 @@ Imagine you have a bunch of users and each user has a bunch of photos all stored
 			    	//handle the error
 			    	if(err) console.log("Failed to find one doc: " + err.message);
 		    		//call the provided proceed method after this user is done 
-			   	this.proceedAfterInParallelAction();
+			   	collection.proceedAfterInParallelAction();
 			} else {
 				//find succeeded
 				//do something with the result
 				
 				//call the provided proceed method after this user is done 
-			  	this.proceedAfterInParallelAction();
+			  	collection.proceedAfterInParallelAction();
 			}
 		});
 	}, function(){
