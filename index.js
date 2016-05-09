@@ -7,13 +7,13 @@ module.exports = {
 	showDebugMessages: true,
 	config: function(prefs){
 		if(prefs) {
-			if(prefs.showDebugMessages) showDebugMessages = prefs.showDebudMessages;
+			if(prefs.showDebugMessages) showDebugMessages = !!prefs.showDebudMessages;
 		}
 	},
 	run: function(collection, parallelAction, onFinish, handleError){
 		if(collection && isFunction(parallelAction) && isFunction(onFinish)) {
 			if(collection.length > 0) {
-				if(showDebugMessages) console.log("Running actions in parallel.");
+				if(this.showDebugMessages) console.log("Running actions in parallel.");
 				collection.parallelErrorsMap99 = {};
 				var numElements = collection.length;
 				var numElementsCompleted = 0;
@@ -39,7 +39,7 @@ module.exports = {
 					}
 				}
 			} else {
-				if(showDebugMessages) {
+				if(this.showDebugMessages) {
 					console.log("Provided collection is empty.");
 				}
 				if(isFunction(handleError)) {
@@ -51,7 +51,7 @@ module.exports = {
 				}
 			}
 		} else {
-			if(showDebugMessages) console.log("Missing necessary arguments. No collection provided.");
+			if(this.showDebugMessages) console.log("Missing necessary arguments. No collection provided.");
 			if(isFunction(handleError)) handleError({message:"Missing necessary arguments: " + collection + " " + parallelAction + " " + onFinish});
 		}
 	}
