@@ -21,7 +21,7 @@ module.exports = {
 
 				/*set the proceed function 
 				for each parallel action to call when it finishes with an element*/
-				this.proceedAfterInParallelAction = function() {
+				var proceedAfterInParallelAction = function() {
 					numElementsCompleted++;
 					
 					//check if all parallel actions are complete
