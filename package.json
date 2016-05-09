@@ -1,0 +1,26 @@
+{
+  "name": "in-parallel",
+  "version": "0.1.0",
+  "description": "A small library for Runs a function on the elements of the provided collection in parallel ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lwdthe1/in-parallel.git"
+  },
+  "keywords": [
+    "parallel", "async", "promise", "in-parallel"
+  ],
+  "author": "Lincoln W Daniel <lwdthe1@gmail.com> (http://lincolnwdaniel.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Lwdthe1/in-parallel/issues"
+  },
+  "homepage": "https://github.com/Lwdthe1/in-parallel#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5"
+  }
+}
