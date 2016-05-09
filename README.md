@@ -6,11 +6,13 @@ A node module for running async tasks on an array and finishing together to run 
   npm install in-parallel --save
 
 ## Usage
+Initialize inParallel like so:
   ```javascript
 	//the proceedAfterParallelAction() method is provided
 	var inParallel = require('scapegoat');
-
-	//A very simple use case
+  ```
+###A Simple Example
+  ```javascript
 	var collection = [1,2,3];
 	inParallel.run(collection, function(element){
 		element++;
@@ -18,7 +20,10 @@ A node module for running async tasks on an array and finishing together to run 
 	}, function(){
 		collection.push(5);
 	});
-  
+  ```
+###A Less Simple Example
+Imagine you have a bunch of users and each user has a bunch of photos all stored in a mongodb. If you have to get each user's photo and do something with them, it'd probably be best to run such tasks in parallel:
+  ```javascript
   	//a less simple use case with a MongoDB query
   	var users = [user1,user2,user3];
   	inParallel.run(users, function(user){
