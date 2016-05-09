@@ -11,7 +11,7 @@ Initialize inParallel like so:
 	//the proceedAfterParallelAction() method is provided
 	var inParallel = require('scapegoat');
   ```
-###A Simple Example
+###A Simple Example With Database Queries
   ```javascript
 	var collection = [1,2,3];
 	inParallel.run(collection, function(element){
