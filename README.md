@@ -16,17 +16,17 @@ A node module for running async tasks on an array and finishing together to run 
 		element++;
 		this.proceedAfterParallelAction();
 	}, function(){
-		this.push(5);
+		collection.push(5);
 	});
   
   	//a less simple use case with a MongoDB query
-  	var collectionOfUsers = [user1,user2,user3];
-  	inParallel.run(collectionOfUsers, function(user){
+  	var users = [user1,user2,user3];
+  	inParallel.run(users, function(user){
 		//find the user's photos
 		db.collection(PHOTOS_COLLECTION).findOne(searchQuery,function(err, doc) {
 			if(err || !doc) {
-		    	//handle the error
-		    	if(err) console.log("Failed to find one doc: " + err.message);
+			    	//handle the error
+			    	if(err) console.log("Failed to find one doc: " + err.message);
 		    		//call the provided proceed method after this user is done 
 			   	this.proceedAfterInParallelAction();
 			} else {
@@ -46,6 +46,15 @@ A node module for running async tasks on an array and finishing together to run 
 		console.log(err.message)
 	});
 ```
+
+## Config
+
+###Debug Messages
+  Debug messages are printed to the console by default but you can choose not have that like so:
+  ```javascript
+  	inParallel.config({showDebugMessages:false});
+  ```
+
   
 
 ## Tests
