@@ -21,7 +21,7 @@ Initialize inParallel like so:
 		collection.push(5);
 	});
   ```
-###A Less Simple Example With Database Queries
+###A Less Simple Example With MongoDB Queries
 Imagine you have a bunch of users and each user has a bunch of photos all stored in a mongodb. If you have to get each user's photo and do something with them, it'd probably be best to run such tasks in parallel:
   ```javascript
   	//a less simple use case with a MongoDB query
